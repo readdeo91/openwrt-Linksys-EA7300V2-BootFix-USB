@@ -6,6 +6,19 @@ https://github.com/trinidude4/openwrt/tree/openwrt-24.10-dualEA7300v2
 
 The `.config` file includes packages to make `USB` work, includes `Luci`, `openvpn`, `wireguard`, `hddIdle`, `wol`, `banIp`, `sqmQOS`, `samba4`, `luci-theme-openwrt-2020`, filesystem support: `ext4`, `btrfs`, `exfat`, `ntfs-3g`
 
+## Local startup script for USB port's power issue
+The USB doesn't have power when the device boots up. You need to add a local startup script to make it work. Mine looks like this now:
+
+```
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+
+# This will make the USB's power work after boot.
+echo 0 > /sys/class/leds/green:wan/brightness
+
+exit 0
+```
+
 ## Original readme:
 
 ![OpenWrt logo](include/logo.png)
