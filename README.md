@@ -1,3 +1,13 @@
+## Purpose of this fork
+This fork was created to set up my own builds for Linksys EA7300 V2 router.
+
+This fork includes `trinidude4`'s patch to make dual booting work on the device from this branch:
+https://github.com/trinidude4/openwrt/tree/openwrt-24.10-dualEA7300v2
+
+The `.config` file includes packages to make `USB` work, includes `Luci`, `openvpn`, `wireguard`, `hddIdle`, `wol`, `banIp`, `sqmQOS`, `samba4`, `luci-theme-openwrt-2020`, filesystem support: `ext4`, `btrfs`, `exfat`, `ntfs-3g`
+
+## Original readme:
+
 ![OpenWrt logo](include/logo.png)
 
 OpenWrt Project is a Linux operating system targeting embedded devices. Instead
